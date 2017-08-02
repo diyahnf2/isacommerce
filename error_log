@@ -1,0 +1,1 @@
+[27-Sep-2016 01:35:58 UTC] PHP Parse error:  syntax error, unexpected 'view' (T_STRING) in /home/isa2015admin/public_html/isacommerce/isacommerce/app/Http/Controllers/AjaxController.php on line 37

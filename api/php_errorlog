@@ -1,0 +1,8 @@
+[05-Aug-2016 13:43:58 asia/jakarta] PHP Fatal error:  Class 'App\Http\Controllers\Input' not found in /home/featours/public_html/api.featours/featours/app/Http/Controllers/ApiController.php on line 1091
+[05-Aug-2016 13:45:36 asia/jakarta] PHP Fatal error:  Call to a member function parameter() on a non-object in /home/featours/public_html/api.featours/featours/vendor/illuminate/http/Request.php on line 901
+[05-Aug-2016 13:50:43 asia/jakarta] PHP Fatal error:  Call to a member function parameter() on a non-object in /home/featours/public_html/api.featours/featours/vendor/illuminate/http/Request.php on line 901
+[05-Aug-2016 06:55:06 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/featours/public_html/api.featours/featours/app/Http/Controllers/ApiController.php on line 1090
+[05-Aug-2016 14:56:47 asia/jakarta] PHP Fatal error:  Class 'App\Http\Controllers\Input' not found in /home/featours/public_html/api.featours/featours/app/Http/Controllers/ApiController.php on line 641
+[05-Aug-2016 14:59:53 asia/jakarta] PHP Fatal error:  Class 'App\Http\Controllers\Input' not found in /home/featours/public_html/api.featours/featours/app/Http/Controllers/ApiController.php on line 648
+[05-Aug-2016 15:01:41 asia/jakarta] PHP Fatal error:  Class 'App\Http\Controllers\Input' not found in /home/featours/public_html/api.featours/featours/app/Http/Controllers/ApiController.php on line 741
+[08-Aug-2016 08:36:27 asia/jakarta] PHP Fatal error:  Class 'App\Http\Controllers\Input' not found in /home/featours/public_html/api.featours/featours/app/Http/Controllers/ApiController.php on line 1343

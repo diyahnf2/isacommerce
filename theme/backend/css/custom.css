@@ -1,0 +1,21 @@
+/* Write your custom CSS here */
+.btn-space {
+    margin-right: 10px;
+}
+.form-control.height-auto {
+	height:auto
+}
+.list-unstyled li > .list-unstyled {
+    margin-left: 25px;
+}
+
+
+.panel .export {
+    padding: 20px;
+    overflow: hidden;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 55px;
+    font-size: 14px;
+    font-weight: 600;
+}
