@@ -10,7 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('show-post-2', 'AjaxController@showPosts');
 Route::get('show-post', 'AjaxController@showPosts');
 Route::get('paginate', 'AjaxController@paginate');
 
