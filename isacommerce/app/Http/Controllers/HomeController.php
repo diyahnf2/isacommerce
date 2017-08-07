@@ -673,7 +673,7 @@ class HomeController extends Controller{
         $validator = Validator::make($request->all(), [
             'city'      => 'required|min:3|max:50',
             'address'   => 'required|min:3|max:50',
-            'postcode'  => 'required|min:3|max:50'
+            'postcode'  => 'required|numeric'
         ]);
         if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();
