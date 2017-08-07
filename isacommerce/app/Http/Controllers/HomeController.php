@@ -407,10 +407,10 @@ class HomeController extends Controller{
      public function updateProfile(Request $request){
         $id=$request->user()->id;
         $validator = Validator::make($request->all(), [
-            'firstname' => 'required|min:3|max:50',
-            'lastname'  => 'required|min:3|max:50',
+            'firstname' => 'required|min:3|max:50|regex:/^[a-zA-Z]+$/u',
+            'lastname'  => 'required|min:3|max:50|regex:/^[a-zA-Z]+$/u',
             'email'     => 'required|email|unique:users,email,'.$id,
-            'phone'     => 'required|min:3|max:50'
+            'phone'     => 'required|numeric'
         ]);
 
         if ($validator->fails()) {
