@@ -355,6 +355,16 @@ class HomeController extends Controller{
                 )
             ); 
 
+            $emailcontent = array (
+                'title'  => "IsaCommerce",
+                'data'   => "DATA",
+                'email'  => $request->email
+            );
+
+            Mail::send('email.activation_account', $emailcontent, function($message) use ($emailcontent){
+                $message->to($emailcontent['email'], 'Activation Account')->subject('Activation Account');
+            });
+
             return back()->with('status', 'Registration has success, please check email to confirm your account.');
         }
     }
