@@ -267,7 +267,7 @@
                                         <img class="img-responsive" alt="product" src="{{ url('theme/backend/images/product/', [$p->image])}}" />
                                     </a>
                                     <div class="quick-view">
-                                            <a title="Add to my wishlist" class="heart" href="#"></a>
+                                            <a title="Add to my wishlist" class="heart wishlist_{{$p->id}}" href="#" onclick="wishlist({{$p->id}})" id="{{$p->id}}"></a>
                                             <a title="Add to compare" class="compare" href="#"></a>
                                             <a title="Quick view" class="search" href="#"></a>
                                     </div>
@@ -353,5 +353,6 @@
 <script type="text/javascript" src="{{ url('theme/frontend/default/assets/js/accounting.min.js')}}"></script>
 <script type="text/javascript" src="{{ url('theme/frontend/default/assets/js/category_product.js')}}"></script>
 <script type="text/javascript" src="{{ url('theme/frontend/default/assets/js/filter-category-3.js')}}"></script>
+<script type="text/javascript" src="{{ url('theme/frontend/default/assets/js/wishlist.js')}}"></script>
 </body>
 </html>

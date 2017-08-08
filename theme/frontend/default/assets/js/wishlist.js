@@ -21,7 +21,6 @@ $(document).ready(function() {
     });
 });
 
-
 function wishlist(product_id)
 {
     var baseUrl = $("#baseurl").val();
