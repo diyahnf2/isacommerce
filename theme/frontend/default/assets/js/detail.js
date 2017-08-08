@@ -62,6 +62,7 @@
 
     $(document).ready(function() {
         $('#submitForm').click(function() {
+            alert("a");
             var stock      = $("span#in-stock").text();
             var product_id = $("#product_id").val();
             var baseUrl = $("#baseurl").val();
