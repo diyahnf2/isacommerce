@@ -22,7 +22,7 @@
             {{$data['title_3']->category_name}}</a>
             <span class="navigation-pipe">&nbsp;</span>
             <span class="home">{{$data['title_3']->product_name}}</span>
-            <input type="hidden" name="baseurl" id="baseurl" value="{{ url('/') }}">
+            <input type="hidden" name="baseurl" id="baseurl" value="'{{ url('/') }}'">
         </div>
         <!-- ./breadcrumb -->
         <!-- row -->
