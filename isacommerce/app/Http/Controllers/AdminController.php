@@ -680,7 +680,7 @@ class AdminController extends Controller{
                     'role_id' => $request->role,
                 ]);
             }
-            return back()->with('status', 'Category was successfully updated!');
+            return back()->with('status', 'User was successfully updated!');
         }
     }
 
