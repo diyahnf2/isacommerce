@@ -609,15 +609,19 @@ class AdminController extends Controller{
         return view('backend.users.users_create')->with('roles', $roles);
     }
     public function usersStore(Request $request){
+        $message = array(
+            'exists'   => 'Please select the role!',
+        );
+
         $validator = Validator::make($request->all(), [
             'name'      => 'required|min:3|max:50',
             'email'     => 'required|email|unique:admins,email',
             'password'  => 'required|min:6|max:50',
             'role'      => 'exists:roles,id',
-        ]);
+        ],$message);
 
         if ($validator->fails()) {
-            return back()->withErrors($validator)->withInput();
+            return back()->withErrors($validator)->withInput(); 
         }
         else{
             $time_now = Carbon::now();
