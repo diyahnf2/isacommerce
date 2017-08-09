@@ -319,9 +319,10 @@
     $(document).ready(function() {
         $('select[name="state"]').on('change', function() {
             var stateID = $(this).val();
+            var baseUrl = $("#baseurl").val();
             if(stateID) {
                 $.ajax({
-                    url: 'https://idesolusiasia.com/isacommerce-dev/province/'+stateID,
+                    url: baseUrl+'/province/'+stateID,
                     type: "GET",
                     dataType: "json",
                     success:function(data) {

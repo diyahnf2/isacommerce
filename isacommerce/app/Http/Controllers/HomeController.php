@@ -355,6 +355,16 @@ class HomeController extends Controller{
                 )
             ); 
 
+            $emailcontent = array (
+                'title'  => "IsaCommerce",
+                'data'   => "DATA",
+                'email'  => $request->email
+            );
+
+            Mail::send('email.activation_account', $emailcontent, function($message) use ($emailcontent){
+                $message->to($emailcontent['email'], 'Activation Account')->subject('Activation Account');
+            });
+
             return back()->with('status', 'Registration has success, please check email to confirm your account.');
         }
     }
@@ -407,10 +417,10 @@ class HomeController extends Controller{
      public function updateProfile(Request $request){
         $id=$request->user()->id;
         $validator = Validator::make($request->all(), [
-            'firstname' => 'required|min:3|max:50',
-            'lastname'  => 'required|min:3|max:50',
+            'firstname' => 'required|min:3|max:50|regex:/^[a-zA-Z]+$/u',
+            'lastname'  => 'required|min:3|max:50|regex:/^[a-zA-Z]+$/u',
             'email'     => 'required|email|unique:users,email,'.$id,
-            'phone'     => 'required|min:3|max:50'
+            'phone'     => 'required|numeric'
         ]);
 
         if ($validator->fails()) {
@@ -673,7 +683,7 @@ class HomeController extends Controller{
         $validator = Validator::make($request->all(), [
             'city'      => 'required|min:3|max:50',
             'address'   => 'required|min:3|max:50',
-            'postcode'  => 'required|min:3|max:50'
+            'postcode'  => 'required|numeric'
         ]);
         if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();
@@ -712,7 +722,7 @@ class HomeController extends Controller{
         $validator = Validator::make($request->all(), [
             'city'      => 'required|min:3|max:50',
             'address'   => 'required|min:3|max:50',
-            'postcode'  => 'required|min:3|max:50'
+            'postcode'  => 'required|numeric'
         ]);
         if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();

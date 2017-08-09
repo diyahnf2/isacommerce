@@ -102,7 +102,7 @@
 
                                             <?php $country_id = (isset($data['address']->country_id) ? $data['address']->country_id : null); ?>
 
-                                            <select name="state" class="form-control">
+                                            <select name="state" class="form-control" id="country">
 
                                                 <option value="">Country</option>
 
@@ -250,7 +250,7 @@
 
                     <a class="prev-btn" href="{{ url('cart') }}">Back</a>
 
-                    <a class="next-btn" href="#" onclick="document.forms['addressForm'].submit();return false;">Proceed to checkout</a> 
+                    <a class="next-btn" href="#" id="proceed-to-checkout">Proceed to checkout</a> 
 
                 </div>
 
@@ -315,9 +315,45 @@
         });
 
     });
-
 </script>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#proceed-to-checkout').click(function() {
+            var country   = document.getElementById('country').value; 
+            var province   = document.getElementById('province').value; 
+            
+            if(country)
+            {
+                document.forms['addressForm'].submit();
+                return false;
+            }
+            else
+            {
+                alert("Please select your country");
+            }
+            // document.forms['addressForm'].submit();
+            // return false;
+
+
+            // var l;
+            // var k =0;
+            // var rowCount = $('#cartTable tr').length;
+            
+            // for(l=0; l<rowCount; l++){
+            //     var stock = $("span#stock-availability_"+l).text();
+            //     if(stock == 'Out of stock'){
+            //         k++;
+            //     }
+            // }
+            // if(k > 0){
+            //     alert('Sorry, your cart contain(s) out of stock product');
+            // }else{
+            //     $("#cartForm" ).submit();
+            // }
+        });
+    });
+</script>
 
 
 </body>

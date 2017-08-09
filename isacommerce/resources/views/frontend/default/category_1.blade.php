@@ -252,7 +252,7 @@
                                         <img class="img-responsive" alt="product" src="{{ url('theme/backend/images/product/', [$p->image])}}" />
                                     </a>
                                     <div class="quick-view">
-                                            <a title="Add to my wishlist" class="heart" href="#"></a>
+                                            <a title="Add to my wishlist" class="heart wishlist_{{$p->id}}" href="#" onclick="wishlist({{$p->id}})" id="{{$p->id}}"></a>
                                             <a title="Add to compare" class="compare" href="#"></a>
                                             <a title="Quick view" class="search" href="#"></a>
                                     </div>
@@ -380,7 +380,7 @@
                         }else{
                             var old_price = key.old_price;
                         }
-                        $('ul#product-list-index').append('<li class="col-sx-12 col-sm-4 product-list-index"><div class="product-container"><div class="left-block"><a href="http://localhost/isacommerce/product/'+key.product_seo+'"><img class="img-responsive" alt="product" src="http://localhost/isacommerce/theme/backend/images/product/'+key.image+'" /></a><div class="quick-view"><a title="Add to my wishlist" class="heart" href="#"></a><a title="Add to compare" class="compare" href="#"></a><a title="Quick view" class="search" href="#"></a></div><div class="add-to-cart"><input type="hidden" name="seo" id="seo_'+j+'" value="'+key.product_seo+'"><input type="hidden" name="product_id" id="product_id_'+j+'" value="'+key.id+'"><input type="hidden" name="quantity" id="quantity_'+j+'" value="'+key.quantity+'"><a title="Add to Cart" class="cart-to-add" href="#">Add to Cart</a></div></div><div class="right-block"><h5 class="product-name"><a href="http://localhost/isacommerce/product/'+key.product_seo+'">'+key.product_name+'</a></h5><div class="content_price"><span class="price product-price">Rp. '+accounting.formatMoney(key.price, "", 2, ",", ",")+'</span><br/><span class="price old-price">'+old_price+'</span></div></div></div></li>');
+                        $('ul#product-list-index').append('<li class="col-sx-12 col-sm-4 product-list-index"><div class="product-container"><div class="left-block"><a href="http://localhost/isacommerce/product/'+key.product_seo+'"><img class="img-responsive" alt="product" src="http://localhost/isacommerce/theme/backend/images/product/'+key.image+'" /></a><div class="quick-view"><a title="Add to my wishlist" class="heart href="#"></a><a title="Add to compare" class="compare" href="#"></a><a title="Quick view" class="search" href="#"></a></div><div class="add-to-cart"><input type="hidden" name="seo" id="seo_'+j+'" value="'+key.product_seo+'"><input type="hidden" name="product_id" id="product_id_'+j+'" value="'+key.id+'"><input type="hidden" name="quantity" id="quantity_'+j+'" value="'+key.quantity+'"><a title="Add to Cart" class="cart-to-add" href="#">Add to Cart</a></div></div><div class="right-block"><h5 class="product-name"><a href="http://localhost/isacommerce/product/'+key.product_seo+'">'+key.product_name+'</a></h5><div class="content_price"><span class="price product-price">Rp. '+accounting.formatMoney(key.price, "", 2, ",", ",")+'</span><br/><span class="price old-price">'+old_price+'</span></div></div></div></li>');
                         j++;
                     });
                     /*var li= '<li><a class="pagination-list" href="#">1</a></li>';
@@ -401,5 +401,7 @@
         });
     });
 </script> -->
+<script type="text/javascript" src="{{ url('theme/frontend/default/assets/js/wishlist.js')}}"></script>
+
 </body>
 </html>

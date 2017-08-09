@@ -9,7 +9,7 @@
                 <a href="#"><i class="fa fa-google-plus"></i></a>
             </div>
             <div class="support-link">
-                <a href="#">Abount Us</a>
+                <a href="#">About Us</a>
                 <a href="#">Support</a>
             </div>
 
@@ -54,7 +54,7 @@
                 </form>
             </div>
             <div id="cart-block" class="col-xs-5 col-sm-2 shopping-cart-box">
-                <?php $cart = ($data['cart'] != 0 ? count($data['cart']) : 0); ?>
+                <?php $cart = ($data['cart'] ? count($data['cart']) : 0); ?>
                 <a class="cart-link" href="{{ url('cart') }}">
                     <span class="title">Shopping cart</span>
                     <span class="total" id="total">{{ $cart }} items</span>
@@ -62,7 +62,7 @@
                 </a>
                 <div class="cart-block">
                     <div class="cart-block-content">
-                        @if($data['cart'] !=0)
+                        @if($cart > 0)
                         <?php $total=0; $i=1; ?>
                         <h5 class="cart-title" id="cart-title">{{ $cart }} Items in my cart</h5>
                         <div class="cart-block-list">
