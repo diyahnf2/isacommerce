@@ -88,7 +88,7 @@ class AdminController extends Controller{
             $category->created_at                = $time_now;
 
             $category->save();
-            return back()->with('status', 'category was successfully added!');
+            return back()->with('status', 'Category was successfully added!');
         }
     }
 
