@@ -75,8 +75,8 @@
                                                         <tr>
                                                             <td>{{$d->product_name}}</td>
                                                             <td>{{$d->quantity}}</td>
-                                                            <td>{{$d->price}}</td>
-                                                            <td class="text-right">{{$sub}}</td>
+                                                            <td>{{number_format($d->price,2,',','.')}}</td>
+                                                            <td class="text-right">{{number_format($sub,2,',','.')}}</td>
                                                         </tr>
                                                     @endforeach
                                                 </tbody>
@@ -89,7 +89,7 @@
                                         <div class="col-md-4">
                                             <div class="text-right">
                                                 <h4 class="no-m m-t-sm">Total</h4>
-                                                <h2 class="no-m">{{$total}}</h2>
+                                                <h2 class="no-m">Rp. {{number_format($total,2,',','.')}}</h2>
                                                 @if(Auth::guard('admin')->user()->can('orders-edit'))
                                                     @if($order->order_status_id=='1')
                                                         <hr>
