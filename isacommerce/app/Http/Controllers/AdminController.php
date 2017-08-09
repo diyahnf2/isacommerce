@@ -156,7 +156,7 @@ class AdminController extends Controller{
             'sku'                       => 'required|unique:product,sku',
             'product'                   => 'array|min:1',
             'upc'                       => 'required',
-            'price'                     => 'required',
+            'price'                     => 'required|min:1|numeric',
             'weight'                    => 'required',
             'quantity'                  => 'required',
             'min_quantity'              => 'required'
@@ -260,7 +260,7 @@ class AdminController extends Controller{
             'product_detail'            => 'required|min:3|max:1750',
             'sku'                       => 'required',
             'upc'                       => 'required',
-            'price'                     => 'required',
+            'price'                     => 'required|min:1|numeric',
             'weight'                    => 'required',
             'quantity'                  => 'required',
             'min_quantity'              => 'required',
