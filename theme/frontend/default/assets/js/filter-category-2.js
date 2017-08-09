@@ -1,8 +1,8 @@
 $(document).ready(function() {
      $('#js-filter').click(function() {
         var pathArray = window.location.pathname.split( '/' );
-        var last_path  = pathArray[5].split('=');
-        var pathname  = pathArray[0] + '/' + pathArray[1] + '/' + pathArray[2] + '/' + pathArray[3] + '/' + pathArray[4] + '/' + last_path[0];
+        var last_path  = pathArray[4].split('=');
+        var pathname  = pathArray[0] + '/' + pathArray[1] + '/' + pathArray[2] + '/' + pathArray[3] + '/'+ last_path[0];
         var backurl   = window.location.pathname;
         var price = [];
         var i = 0;
