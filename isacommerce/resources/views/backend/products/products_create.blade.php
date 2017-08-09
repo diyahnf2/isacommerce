@@ -352,7 +352,7 @@
                                 </div>
 								<div class="panel-footer">
 									<button class="btn btn-success btn-space" type="submit">Submit</button>
-									<a class="btn btn-danger btn-space" href="{{ url('/cms/services') }}">Cancel</a>
+									<a class="btn btn-danger btn-space" href="{{ url('/isa-cms/products') }}">Cancel</a>
 								</div>
                             </div>
                         </form>

@@ -64,7 +64,7 @@ class AdminController extends Controller{
     public function categoryStore(Request $request){
         $validator = Validator::make($request->all(), [
             'parent_id'                  => 'required',
-            'category_name'              => 'required|min:3|max:100',
+            'category_name'              => 'required|min:3|max:100|unique:category,category_name',
             'category_meta_title'        => 'required|min:3|max:50',
             'category_meta_description'  => 'required|min:3|max:100',
             'category_meta_keyword'      => 'required|min:3|max:50'
@@ -88,7 +88,7 @@ class AdminController extends Controller{
             $category->created_at                = $time_now;
 
             $category->save();
-            return back()->with('status', 'category was successfully added!');
+            return back()->with('status', 'Category was successfully added!');
         }
     }
 
@@ -156,7 +156,7 @@ class AdminController extends Controller{
             'sku'                       => 'required|unique:product,sku',
             'product'                   => 'array|min:1',
             'upc'                       => 'required',
-            'price'                     => 'required',
+            'price'                     => 'required|min:1|numeric',
             'weight'                    => 'required',
             'quantity'                  => 'required',
             'min_quantity'              => 'required'
@@ -260,7 +260,7 @@ class AdminController extends Controller{
             'product_detail'            => 'required|min:3|max:1750',
             'sku'                       => 'required',
             'upc'                       => 'required',
-            'price'                     => 'required',
+            'price'                     => 'required|min:1|numeric',
             'weight'                    => 'required',
             'quantity'                  => 'required',
             'min_quantity'              => 'required',
@@ -680,7 +680,7 @@ class AdminController extends Controller{
                     'role_id' => $request->role,
                 ]);
             }
-            return back()->with('status', 'Category was successfully updated!');
+            return back()->with('status', 'User was successfully updated!');
         }
     }
 

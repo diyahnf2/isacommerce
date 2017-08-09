@@ -69,7 +69,7 @@
                                                     <td>{{ $no }}.</td>
                                                     <td>{{ $p->sku }}</td>
                                                     <td>{{ $p->product_name }}</td>
-                                                    <td>{{ $p->price }}</td>
+                                                    <td>{{ number_format($p->price,2,',','.') }}</td>
                                                     <td>{{ $p->weight }}</td>
                                                     <td>{{ $p->quantity }}</td>
                                                     <td>{{ $enable }}</td>
