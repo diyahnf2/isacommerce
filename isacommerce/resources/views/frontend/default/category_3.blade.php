@@ -351,7 +351,7 @@
 @include('frontend.default.partials.footer')
 @include('frontend.default.partials.javascript')
 <script type="text/javascript" src="{{ url('theme/frontend/default/assets/js/accounting.min.js')}}"></script>
-<script type="text/javascript" src="{{ url('theme/frontend/default/assets/js/category_product.js')}}"></script>
+<!-- <script type="text/javascript" src="{{ url('theme/frontend/default/assets/js/category_product.js')}}"></script> -->
 <script type="text/javascript" src="{{ url('theme/frontend/default/assets/js/filter-category-3.js')}}"></script>
 <script type="text/javascript" src="{{ url('theme/frontend/default/assets/js/wishlist.js')}}"></script>
 </body>
