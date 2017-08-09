@@ -64,7 +64,7 @@ class AdminController extends Controller{
     public function categoryStore(Request $request){
         $validator = Validator::make($request->all(), [
             'parent_id'                  => 'required',
-            'category_name'              => 'required|min:3|max:100',
+            'category_name'              => 'required|min:3|max:100|unique:category,category_name',
             'category_meta_title'        => 'required|min:3|max:50',
             'category_meta_description'  => 'required|min:3|max:100',
             'category_meta_keyword'      => 'required|min:3|max:50'
