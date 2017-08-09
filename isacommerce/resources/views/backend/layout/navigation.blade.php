@@ -14,15 +14,15 @@
                     <li>        
                         <a href="javascript:void(0);" class="waves-effect waves-button waves-classic sidebar-toggle"><i class="fa fa-bars"></i></a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#cd-nav" class="waves-effect waves-button waves-classic cd-nav-trigger"><i class="fa fa-diamond"></i></a>
-                    </li>
+                    </li> -->
                     <li>        
                         <a href="javascript:void(0);" class="waves-effect waves-button waves-classic toggle-fullscreen"><i class="fa fa-expand"></i></a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
+                    <!-- <li class="dropdown">
                         <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown">
                             <span class="user-name">{{ Auth::guard('admin')->user()->name }}<i class="fa fa-angle-down"></i></span>
                             <img class="img-circle avatar" src="{{ url('theme/backend/images/avatar1.png') }}" width="40" height="40" alt="">
@@ -31,7 +31,7 @@
                             <li role="presentation"><a href="{{ url('/isa-cms/profile',Auth::guard('admin')->user()->id) }}"><i class="fa fa-user"></i>Profile</a></li>
                             <li role="presentation"><a href="{{ url('/isa-cms/logout') }}"><i class="fa fa-sign-out m-r-xs"></i>Log out</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="{{ url('/isa-cms/logout') }}" class="log-out waves-effect waves-button waves-classic">
                             <span><i class="fa fa-sign-out m-r-xs"></i>Log out</span>
